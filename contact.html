@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — JD Fitness</title>
+  <meta name="description" content="Contact JD Fitness — send us a message or visit the gym." />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="JD Fitness - Home">
+        <span class="logo-mark" aria-hidden="true">JD</span>
+        <span class="brand-text">JD Fitness</span>
+      </a>
+      <button id="navToggleContact" class="nav-toggle" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+      <nav id="mainNav" class="main-nav" role="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container contact-page">
+    <section>
+      <h1>Contact Us</h1>
+      <p>Have questions or ready to join? Send us a message or visit the gym.</p>
+    </section>
+
+    <section class="contact-grid grid grid-2">
+      <div class="contact-form-wrap">
+        <form id="contactForm" class="contact-form" aria-label="Contact form" method="POST" action="https://formspree.io/f/xovyakjq">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required aria-required="true" placeholder="Your full name">
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com">
+
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" placeholder="+91 9xxxxxxxxx">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="How can we help?"></textarea>
+
+          <button class="btn btn-primary" type="submit">Send Message</button>
+          <div id="formStatus" role="status" aria-live="polite" class="form-status" hidden></div>
+        </form>
+        <p class="small-note">This form uses Formspree for demo. Replace action attribute with your Formspree endpoint.</p>
+      </div>
+
+      <aside class="contact-details">
+        <h2>Visit Us</h2>
+        <p>123 Fitness Street<br>Your City, Your State</p>
+        <p>Email: <a href="mailto:pratham.chowdhari13@gmail.com">pratham.chowdhari13@gmail.com</a><br>Phone: +91 95798 20192</p>
+        <h3>Opening Hours</h3>
+        <p>Mon–Sat: 6:00am – 10:00pm<br>Sunday: 8:00am – 5:00pm</p>
+
+        <h3>Map</h3>
+        <!-- Replace src with your actual Google Maps embed link -->
+        <div class="map-wrap">
+          <iframe title="JD Fitness location" src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <strong>JD Fitness</strong>
+        <p>Email: <a href="mailto:pratham.chowdhari13@gmail.com">pratham.chowdhari13@gmail.com</a><br>Phone: +91 95798 20192</p>
+      </div>
+      <div class="footer-right">
+        <nav aria-label="Footer">
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <p class="copyright">© 2025 NodeCraft Studio — Pratham Chowdhari</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/form.js" defer></script>
+  <script src="js/chatbot.js" defer></script>
+</body>
+</html>

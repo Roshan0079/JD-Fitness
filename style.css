@@ -1,0 +1,134 @@
+/* css/style.css
+   NodeCraft Studio — JD Fitness
+   Variables, layout and responsive styles.
+*/
+
+/* Variables */
+:root{
+  --color-primary: #E53935; /* red */
+  --color-neutral: #121212; /* black */
+  --color-bg: #FFFFFF; /* white */
+  --text: #111;
+  --muted: #666;
+  --radius: 12px;
+  --max-width: 1100px;
+  --container-padding: 1rem;
+  --shadow: 0 6px 18px rgba(18,18,18,0.08);
+  --glass: rgba(255,255,255,0.6);
+  --gutter: 1rem;
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* Base reset */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--color-bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+  font-size:16px;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
+}
+
+/* Container */
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+
+/* Accessibility helpers */
+.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+
+/* Header */
+.site-header{position:sticky;top:0;background:linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));backdrop-filter: blur(4px);z-index:40;border-bottom:1px solid #eee}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 0}
+.brand{display:flex;align-items:center;gap:0.5rem;text-decoration:none;color:var(--color-neutral);font-weight:700}
+.logo-mark{display:inline-block;background:var(--color-primary);color:#fff;padding:0.25rem 0.5rem;border-radius:6px;font-weight:800}
+.main-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem}
+.main-nav a{text-decoration:none;color:var(--text);padding:0.5rem;border-radius:6px}
+
+/* Mobile nav toggle */
+.nav-toggle{display:none;background:none;border:0;padding:0;margin:0;cursor:pointer}
+.hamburger{display:block;width:24px;height:2px;background:var(--color-neutral);position:relative}
+.hamburger::after,.hamburger::before{content:"";position:absolute;left:0;width:24px;height:2px;background:var(--color-neutral)}
+.hamburger::before{top:-7px}
+.hamburger::after{top:7px}
+
+/* Hero */
+.hero{padding:2.5rem 0;display:flex;align-items:center}
+.hero-inner{display:flex;gap:2rem;align-items:center}
+.hero-copy h1{font-size:2rem;margin:0 0 0.5rem;font-family:'Montserrat',sans-serif}
+.hero-copy .tagline{color:var(--muted);margin-bottom:1rem}
+.hero-ctas{display:flex;gap:1rem}
+.btn{display:inline-block;padding:0.65rem 1rem;border-radius:8px;text-decoration:none;font-weight:600;cursor:pointer;border:2px solid transparent}
+.btn-primary{background:var(--color-primary);color:#fff}
+.btn-ghost{background:transparent;color:var(--color-primary);border-color:var(--color-primary)}
+.btn-outline{background:transparent;border:2px solid #ddd;padding:0.5rem 0.75rem}
+
+/* Grids */
+.grid{display:grid;gap:1rem}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+
+/* Cards */
+.card{padding:1rem;border-radius:12px;background:#fff;box-shadow:var(--shadow)}
+.card-icon{font-size:2rem}
+.pricing-card{padding:1.25rem;border-radius:12px;background:#fff;box-shadow:var(--shadow);text-align:center}
+.pricing-card.recommended{border:2px solid var(--color-primary)}
+.pricing-card .price{font-size:1.5rem;font-weight:700;margin:0.5rem 0}
+.badge{display:inline-block;background:var(--color-primary);color:#fff;padding:0.25rem 0.5rem;border-radius:20px;font-size:0.8rem;margin-bottom:0.5rem}
+.recommended .badge{background:var(--color-primary)}
+
+/* Testimonials */
+.testimonial{padding:1rem;border-radius:10px;background:#fff;box-shadow:var(--shadow);}
+
+/* Footer */
+.site-footer{border-top:1px solid #eee;padding:1rem 0;margin-top:2rem;background:#fafafa}
+.footer-inner{display:flex;justify-content:space-between;gap:1rem;align-items:center}
+
+/* Forms */
+.contact-form label{display:block;margin-top:0.75rem}
+.contact-form input,.contact-form textarea{width:100%;padding:0.6rem;border-radius:8px;border:1px solid #ddd;margin-top:0.25rem}
+.form-status{margin-top:0.75rem;color:var(--muted)}
+
+/* Chatbot (container target) */
+#chatbot-root{position:fixed;right:1rem;bottom:1.25rem;z-index:9999}
+
+/* Responsive behaviour - mobile-first */
+@media(min-width:700px){
+  .hero{padding:3rem 0}
+  .hero-inner{display:flex}
+  .hero-copy h1{font-size:2.75rem}
+  .grid-2{grid-template-columns:repeat(2,1fr)}
+  .grid-3{grid-template-columns:repeat(3,1fr)}
+}
+
+/* Desktop tweaks */
+@media(min-width:980px){
+  .container{padding:2rem}
+  .header-inner{padding:1rem 0}
+}
+
+/* Mobile nav state (JS toggles .open) */
+.main-nav{display:none}
+.main-nav.open{display:block}
+@media(min-width:700px){
+  .nav-toggle{display:none}
+  .main-nav{display:block}
+}
+
+/* Preloader */
+#preloader{position:fixed;inset:0;background:rgba(255,255,255,0.9);display:flex;align-items:center;justify-content:center;z-index:99999}
+#preloader .spinner{width:48px;height:48px;border-radius:50%;border:6px solid #eee;border-top-color:var(--color-primary);animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Utility */
+.small-note{font-size:0.9rem;color:var(--muted)}
+.section-title{font-family:'Montserrat',sans-serif;margin-bottom:0.75rem}
+
+/* Print adjustments */
+@media print{
+  .site-header,.site-footer, #chatbot-root{display:none}
+  .print-table table{width:100%;border-collapse:collapse}
+  .print-table th,.print-table td{border:1px solid #ddd;padding:6px}
+}

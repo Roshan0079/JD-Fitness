@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JD Fitness - Transform Your Body. Transform Your Life.</title>
+  <meta name="description" content="JD Fitness: Expert trainers, personalized plans and a welcoming gym environment. Join today and transform your life." />
+  <link rel="canonical" href="https://example.com/" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="JD Fitness - Transform Your Body. Transform Your Life." />
+  <meta property="og:description" content="Expert trainers, personalized plans and a welcoming gym environment. Join today." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/hero.jpg" />
+  <meta property="og:url" content="https://example.com/" />
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#E53935" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SportsActivityLocation",
+    "name":"JD Fitness",
+    "image":["images/hero.jpg"],
+    "@id":"https://example.com/#jdfitness",
+    "url":"https://example.com",
+    "telephone":"+91 95798 20192",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"123 Fitness Street",
+      "addressLocality":"Your City",
+      "addressRegion":"Your State",
+      "postalCode":"000000",
+      "addressCountry":"IN"
+    },
+    "openingHours":"Mo-Sa 06:00-22:00, Su 08:00-17:00"
+  }
+  </script>
+  <link rel="icon" href="assets/favicon.ico">
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader" aria-hidden="true">
+    <div class="spinner" role="status" aria-label="Loading"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="JD Fitness - Home">
+        <span class="logo-mark" aria-hidden="true">JD</span>
+        <span class="brand-text">JD Fitness</span>
+      </a>
+
+      <button id="navToggle" class="nav-toggle" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="mainNav" class="main-nav" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Transform Your Body. Transform Your Life.</h1>
+          <p class="tagline">Personal training, group classes and nutrition coaching — everything you need to reach your fitness goals.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="pricing.html">Join Today</a>
+            <a class="btn btn-ghost" href="services.html">Explore Services</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <!-- hero.jpg placeholder: Replace with high-quality hero image (recommended 1600x900, optimized WebP/JPEG). -->
+          <img src="images/hero.jpg" alt="People training at JD Fitness gym" width="800" height="450">
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features container" aria-labelledby="features-heading">
+      <h2 id="features-heading" class="section-title">What We Offer</h2>
+      <div class="grid grid-3">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">💪</div>
+          <h3>Personal Training</h3>
+          <p>One-on-one coaching to help you reach specific strength and conditioning goals.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🧘‍♀️</div>
+          <h3>Group Classes</h3>
+          <p>Yoga, HIIT, and functional fitness classes for all levels.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🥗</div>
+          <h3>Nutrition Coaching</h3>
+          <p>Custom meal plans and advice to complement your training.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Plans preview -->
+    <section class="plans container" aria-labelledby="plans-heading">
+      <h2 id="plans-heading" class="section-title">Membership Plans</h2>
+      <div class="grid grid-3">
+        <div class="pricing-card">
+          <h4>Basic</h4>
+          <p class="price">₹999<span class="per">/mo</span></p>
+          <ul>
+            <li>Gym access</li>
+            <li>Locker access</li>
+            <li>1 group class per month</li>
+          </ul>
+          <a class="btn btn-outline" href="pricing.html">Choose Basic</a>
+        </div>
+        <div class="pricing-card recommended">
+          <div class="badge">Recommended</div>
+          <h4>Standard</h4>
+          <p class="price">₹1,799<span class="per">/mo</span></p>
+          <ul>
+            <li>All Basic features</li>
+            <li>4 group classes per month</li>
+            <li>1 free personal training session</li>
+          </ul>
+          <a class="btn btn-primary" href="pricing.html">Choose Standard</a>
+        </div>
+        <div class="pricing-card">
+          <h4>Premium</h4>
+          <p class="price">₹2,999<span class="per">/mo</span></p>
+          <ul>
+            <li>Unlimited classes</li>
+            <li>Weekly personal training</li>
+            <li>Nutrition coaching</li>
+          </ul>
+          <a class="btn btn-outline" href="pricing.html">Choose Premium</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials (placeholder) -->
+    <section class="testimonials container" aria-labelledby="testimonials-heading">
+      <h2 id="testimonials-heading" class="section-title">What Our Members Say</h2>
+      <div class="grid grid-2">
+        <blockquote class="testimonial">
+          <p>"JD Fitness helped me get stronger and more confident. Their trainers are top-notch."</p>
+          <cite>— Alex R.</cite>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>"Great vibe, clean facility, and friendly staff — highly recommend."</p>
+          <cite>— Priya S.</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta container">
+      <h2>Ready to start?</h2>
+      <p>Sign up today and get a free 7-day trial on the Standard plan.</p>
+      <a class="btn btn-primary" href="contact.html">Get Started</a>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <strong>JD Fitness</strong>
+        <p>Email: <a href="mailto:pratham.chowdhari13@gmail.com">pratham.chowdhari13@gmail.com</a><br>Phone: +91 95798 20192</p>
+      </div>
+      <div class="footer-right">
+        <nav aria-label="Footer">
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <p class="copyright">© 2025 NodeCraft Studio — Pratham Chowdhari</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Chatbot Button -->
+  <div id="chatbot-root" aria-live="polite"></div>
+
+  <script src="main.js" defer></script>
+  <script src="chatbot.js" defer></script>
+  <script src="form.js" defer></script>
+</body>
+</html>
